@@ -1,0 +1,16 @@
+<div>
+
+	<v-book
+			class="form-books"
+			:api="API.get('books')"
+			:data="book"
+	></v-book>
+
+	<v-grid-book
+			class="grid-books"
+			:store="books"
+			:singleSelect="true"
+			@select="setBookToForm"
+	></v-grid-book>
+
+</div>

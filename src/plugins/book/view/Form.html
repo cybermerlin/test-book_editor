@@ -1,0 +1,33 @@
+<div>
+	<v-form
+			:model="model"
+	>
+		<tempalte>
+			<label class="block">
+				<input v-model="model.title"/>
+			</label>
+			
+			<label class="block">
+				<input v-model="model.authors"/>
+			</label>
+			
+			<label class="block">
+				<input v-model="model.pages"/>
+			</label>
+			
+			<label class="block">
+				<input v-model="model.publisher"/>
+			</label>
+			
+			<label class="block">
+				<input v-model="model.year"/>
+			</label>
+
+
+			<v-image-uploader
+					:api="Core.API.get('books').uploadImage()"
+					@uploaded="onUploadedImg"
+			></v-image-uploader>
+		</tempalte>
+	</v-form>
+</div>
